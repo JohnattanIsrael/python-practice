@@ -1,5 +1,5 @@
 # string uses
-'''
+
 sentence = 'the wick brown fox jumped over the lazy dog fence'
 
 sentence_two = 'that is my dog\'s bowl'
@@ -7,7 +7,7 @@ sentence_two = 'that is my dog\'s bowl'
 sentence_three = "that is my dog's bowl"
 
 sentence_four = "Tifany said, \"That is my dog's bowl\""
-'''
+
 print(sentence_four)
 
 sentence = 'the quick brown fox jumped'

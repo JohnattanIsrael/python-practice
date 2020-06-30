@@ -1,22 +1,22 @@
-# meal_completed = True
-# total = 100
-# tip = total * 1/5
-# total = total + tip
+meal_completed = True
+total = 100
+tip = total * 1/5
+total = total + tip
 
-# receipt = "Your total is " + str(total)
+receipt = "Your total is " + str(total)
 
-# print(tip)
-# print(receipt)
+print(tip)
+print(receipt)
 
-# first = 'Springer'
-# second = 'Bregman'
-# third= 'Altuve'
+first = 'Springer'
+second = 'Bregman'
+third= 'Altuve'
 
-# print(first)
+print(first)
 
-# first = third
+first = third
 
-# print(first)
+print(first)
 
 """
 list - a collection of data ( any kind of data)
@@ -25,13 +25,12 @@ tuple -collection of items but a little different than a list
 
 """
 # LISTS 
-"""
+
 User Database Query
 Kristine
 Tiffany
 Jordan
-"""
-"""
+
 users = ['Kristine', 'Tiffany', 'Jordan'] #a list
 
 print(users) #['Kristine', 'Tiffany', 'Jordan']
@@ -53,8 +52,7 @@ print([users[2]]) #['Tiffany']
 users[4] = 'Brayden' #['Kristine', 'Anthony', 'Tiffany', 'Jordan', 'Brayden'] remeber that strings are inmmutable
 
 print(users)
-"""
-"""
+
 users = ['Kristine', 'Tiffany', 'Jordan', 'Leann']
 
 print(users) #> ['Kristine', 'Tiffany', 'Jordan', 'Leann']
@@ -70,8 +68,7 @@ print(users) #> ['Kristine', 'Tiffany']
 
 del users[0]
 print(users) #> ['Tiffany']
-"""
-"""
+
 users = ['Kristine', 'Tiffany', 'Jordan', 'Leann']
 
 ids = [ 1, 2, 3, 4]
@@ -84,8 +81,8 @@ user_list = mixed_list.pop()
 
 print(user_list) #> ['Kristine', 'Tiffany', 'Jordan', 'Leann']
 print(mixed_list) #> [42, 10.3, 'Altuve']
-"""
-"""
+
+
 #List Query in Python
 
 tags = ['python', 'development', 'tutorials', 'code']
@@ -99,7 +96,7 @@ index_of_last_item = tags.index(last_item)
 print(numbers_of_tags)
 print(last_item)
 print(index_of_last_item)
-"""
+
 
 tags = ['python', 'development', 'tutorials', 'code']
 
