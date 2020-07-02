@@ -1,10 +1,10 @@
 tags = ['python', 'development', 'tutorials', 'code']
 
-#in this case you replaced the last element so it´s not for adding elements
+# in this case you replaced the last element so it´s not for adding elements
 # tags[-1] = 'Programming'
 # print(tags) #> ['python', 'development', 'tutorials', 'Programming']
 
-#adding without brackets divides each character
+# adding without brackets divides each character
 # tags.extend('Programming')
 # print(tags) #> ['python', 'development', 'tutorials', 'code', 'P', 'r', 'o', 'g', 'r', 'a', 'm', 'm', 'i', 'n', 'g']
 
