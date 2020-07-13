@@ -26,28 +26,4 @@ for post in soup.find_all(class_='post-link-title'):
 
 
 
-# links = [a['href'] for a in soup.find_all('a', href=True)]
-# links = []
-# for link in soup.find_all('a'):
-#     links.append(link.get('href'))
-# print(links[:5])
-    
-
-
-
-
-
-# posts = soup.find(class_='post-link-title')
-
-# for post in posts:
-#     link = post.find('a')['href']
-#     for lin in link:
-#         title = str.format(lin)
-#     print(link)
-#     print(lin)
-
-# # print(len(posts))
-# print('---------')
-
-
 
