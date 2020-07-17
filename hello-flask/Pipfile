@@ -8,6 +8,10 @@ verify_ssl = true
 [packages]
 numpy = "*"
 requests = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
 
 [requires]
 python_version = "3.8"
