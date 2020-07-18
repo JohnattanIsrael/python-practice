@@ -74,8 +74,19 @@ def get_guide(id):#this time we do pass an argument : the id
     guide = Guide.query.get(id)#tells flask to look out for /guide/and the id that we are looking for, and it will get the id placing it in the new vaiable guide
     return guide_schema.jsonify(guide) #it turns it into a json and it structures it wth schema
 
+# Endponit to Updating a guide #this |PUT| tells tfask what action
+@app.route('/guide/<id>', methods=['PUT'])#we use <> because we need to know hwat guide are we oing to be updating
+def guide_update(id):
+    guide = Guide.query.get(id)
+    title = request.json['title']
+    content = request.json['content'] #we are perfonrmking a query i the database for the guide we are taking in the title and the content from that API request
+
+    guide.title = title
+    guide.content = content #we are now overwriting the content antitle that gpt back from the database and
+    # staring a new database session to uodate those values(content and title)
+    db.session.commit()#remeber this one doe not need the colon: is a ne session n the database db
+    return guide_schema.jsonify(guide)
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-# 
