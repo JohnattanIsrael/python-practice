@@ -86,6 +86,21 @@ print(first_sale_items)
 print(last_sale_items)
 
 print(median)
+print('---------')
+from decimal import Decimal
+# Decimal('4.20') % 1
+# Decimal('0.20')
+# Decimal(str(n)) % 1
+
+price = 3.20
+
+old_decimal = Decimal(price) % 1
+print(float(price) - float(old_decimal) + 0.99)
+
+
+print(float(price))
+
+
 
 
 
