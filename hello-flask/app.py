@@ -65,6 +65,17 @@ def get_guides():
 # # IMPORTANTE ok so in the version 3.0, no need to access .data attribute, dump already returns the data- data was deserialized in Marshmallow
     return jsonify(result)
 
+# this all to create the crude option s for a very basic learning management system
+
+# Endpoint for quering a single guide, not a collection but a single item
+# now we need to tell th eapp.route our app the decotation what guide to brong back
+@app.route('/guide/<id>', methods=['GET'])# this <id> thing is what allows us to later ask for a specific guide
+def get_guide(id):#this time we do pass an argument : the id
+    guide = Guide.query.get(id)#tells flask to look out for /guide/and the id that we are looking for, and it will get the id placing it in the new vaiable guide
+    return guide_schema.jsonify(guide) #it turns it into a json and it structures it wth schema
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
+# 
