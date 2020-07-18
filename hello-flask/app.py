@@ -34,7 +34,7 @@ class GuideSchema(ma.Schema):
 guide_schema= GuideSchema()
 guides_schema = GuideSchema(many=True)
     
-# Create a POST API Endpoint - to create a new guide
+# Create a POST API Endpoint - to create a new guide programatically
 # if you want to create a new guide you are going to point to this endpoint and use the http POST method at the /guide route- now we will create a method
 @app.route('/guide', methods=['POST'])
 def add_guide():
@@ -54,8 +54,16 @@ def add_guide():
     return guide_schema.jsonify(guide)
 # THIS IS A JSON API
 
+# now we need a URL to get all the guide
+# endpornt to query guides
 
-
+@app.route('/guides', methods=['GET'])#GET is the http function that we want t use
+def get_guides():
+    all_guides = Guide.query.all()#this is goingt to get back all of the guide f the system
+    result = guides_schema.dump(all_guides)#now we are using not the single guide but the one that allows us to work with ultible bacause many=True--dump is a function of marshmallow
+#   return jsonify(result.data)#well get back the json data fro the result variable--
+# # IMPORTANTE ok so in the version 3.0, no need to access .data attribute, dump already returns the data- data was deserialized in Marshmallow
+    return jsonify(result)
 
 if __name__ == '__main__':
     app.run(debug=True)
